@@ -1,1 +1,2 @@
-/home/vivi/.fehbg
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/vivi/Downloads/Wallpapers/New Wallpapers/June 19, 2021-39560.jpg' 
