@@ -197,9 +197,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
-
+# bar {
+#        status_command i3status
+#}
+# exec polybar
 exec ~/.fehbg &
 for_window [class="^.*"] border none
