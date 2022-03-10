@@ -1,0 +1,1 @@
+/home/vivi/.config/i3
