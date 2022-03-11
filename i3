@@ -203,3 +203,6 @@ bindsym $mod+r mode "resize"
 # exec polybar
 exec ~/.fehbg &
 for_window [class="^.*"] border none
+
+exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2; exec notion-app; exec todoist; workspace comm; exec discord; exec signal-desktop; workspace cmd; exec alacritty;'
+
