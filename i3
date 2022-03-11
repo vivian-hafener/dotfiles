@@ -126,6 +126,7 @@ set $wsdev "dev"
 set $wscomm "comm"
 set $wsrc "RC" 
 set $wstty "cmd"
+set $wsgame "game"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -143,6 +144,7 @@ bindsym $mod+t workspace $wstty
 bindsym $mod+u workspace $wscomm
 bindsym $mod+o workspace $wsdev
 bindsym $mod+p workspace $wsrc
+bindsym $mod+g workspace $wsgame
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -160,6 +162,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+u workspace $wscomm
 bindsym $mod+Shift+o workspace $wsdev
 bindsym $mod+Shift+p workspace $wsrc
+bindsym $mod+Shift+g workspace $wagame
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
