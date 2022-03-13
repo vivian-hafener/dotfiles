@@ -127,6 +127,7 @@ set $wscomm "comm"
 set $wsrc "RC" 
 set $wstty "cmd"
 set $wsgame "game"
+set $wsvm "VM"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -145,6 +146,7 @@ bindsym $mod+u workspace $wscomm
 bindsym $mod+o workspace $wsdev
 bindsym $mod+p workspace $wsrc
 bindsym $mod+g workspace $wsgame
+bindsym $mod+m workspace $wsvm
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -162,7 +164,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+u workspace $wscomm
 bindsym $mod+Shift+o workspace $wsdev
 bindsym $mod+Shift+p workspace $wsrc
-bindsym $mod+Shift+g workspace $wagame
+bindsym $mod+Shift+g workspace $wsgame
+bindsym $mod+Shift+m workspace $wsvm
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,5 +210,8 @@ bindsym $mod+r mode "resize"
 exec ~/.fehbg &
 for_window [class="^.*"] border none
 exec polybar
-exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2; exec notion-app; exec todoist; workspace comm; exec discord; exec signal-desktop; workspace cmd; exec alacritty;'
+exec --no-startup-id i3-msg 'workspace 1; exec firefox;'
+exec --no-startup-id i3-msg 'workspace 2; exec notion-app; exec todoist'
+exec --no-startup-id i3-msg 'workspace comm; exec discord; exec signal-desktop;'
+exec --no-startup-id i3-msg 'workspace cmd; exec alacritty;'
 
