@@ -50,10 +50,12 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+bindsym $mod+shift+x exec betterlockscreen --lock
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id 
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -209,9 +211,6 @@ bindsym $mod+r mode "resize"
 # exec polybar
 exec ~/.fehbg &
 for_window [class="^.*"] border none
-exec polybar
-exec --no-startup-id i3-msg 'workspace 1; exec firefox;'
-exec --no-startup-id i3-msg 'workspace 2; exec notion-app; exec todoist'
-exec --no-startup-id i3-msg 'workspace comm; exec discord; exec signal-desktop;'
-exec --no-startup-id i3-msg 'workspace cmd; exec alacritty;'
-
+exec polybar -c /home/vivi/.config/polybar/polybar.ini
+exec nextcloud-desktop
+exec picom &
