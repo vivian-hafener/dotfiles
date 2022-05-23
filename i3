@@ -211,6 +211,7 @@ bindsym $mod+r mode "resize"
 # exec polybar
 exec ~/.fehbg &
 for_window [class="^.*"] border none
-exec polybar -c /home/vivi/.config/polybar/polybar.ini
+#exec polybar -c /home/vivi/.config/polybar/polybar.ini
+exec bash ~/.config/polybar/launch.sh --cuts
 exec nextcloud-desktop
 exec picom &
